@@ -1,0 +1,36 @@
+CodeIgniter helper for generate share url and buttons (Twitter, Facebook, Buzz, VKontakte)
+
+http://codeigniter.com/wiki/Share-helper/
+
+------------------------------------------------------------------------------
+
+Example of use:
+
+<?
+// in Controller
+$url    = 'http://rockufa.ru';
+$text    = 'Best Rock Portal Ever';
+$image    = 'http://rockufa.ru/forum/Smileys/rockufa/qut.gif';
+?>
+
+<!-- this is View -->
+<p>
+    <a >$url, 'text'=>$text, 'via'=>'mpak666'))?>">Share to Twitter</a>
+    <a >$url, 'text'=>$text))?>">Share to Facebook</a>
+    <a >$url, 'image'=>$image, 'text'=>$text))?>">Share to Google Buzz</a>
+    <a >$url))?>">Share to Vkontakte</a>
+</p>
+<p>
+    <?=share_button('twitter',    array('url'=>$url, 'text'=>$text, 'via'=>'mpak666', 'type'=>'iframe'))?>
+    <?=share_button('facebook',    array('url'=>$url, 'text'=>$text))?>
+    <?=share_button('buzz',        array('url'=>$url, 'image'=>$image, 'text'=>$text))?>
+    <?=share_button('vkontakte',array('url'=>$url))?>
+</p>  
+
+------------------------------------------------------------------------------
+
+Author: Ibragimov "MpaK" Renat <info@mrak7.com> http://mrak7.com
+
+------------------------------------------------------------------------------
+
+Do What Thou Wilt Shall Be The Whole Of The Law (c) Alister Crowley
